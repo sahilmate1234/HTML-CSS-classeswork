@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-LearnHub | Quiz</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+      padding: 0.7rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* Progress Bar */
+    .progress {
+      width: 100%;
+      background: #ddd;
+      height: 8px;
+    }
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 40%; /* Example progress */
+      background: #27ae60;
+      transition: width 0.4s ease;
+    }
+
+    /* Main Section */
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+
+    /* Instructions */
+    .instructions {
+      background: #ecf0f1;
+      padding: 10px;
+      border-left: 5px solid #3498db;
+      margin-bottom: 20px;
+    }
+
+    /* Question Card */
+    .question-card {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .question-card:hover {
+      transform: scale(1.02);
+    }
+    .question-card h3 {
+      margin-bottom: 10px;
+    }
+    .question-card input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      background: #3498db;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    .submit-btn:hover {
+      background: #2980b9;
+    }
+
+    /* Result Box */
+    .result-box {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 5px solid #27ae60;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>E-LearnHub</header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Quiz</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Progress Bar -->
+  <div class="progress"><span></span></div>
+
+  <!-- Main -->
+  <main>
+    <h2>HTML & CSS Fundamentals Quiz</h2>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <p><strong>Instructions:</strong> Answer all questions carefully. Select the correct option for each question. Click "Submit Quiz" when finished.</p>
+    </div>
+
+    <!-- Quiz Form -->
+    <form>
+      <!-- Question 1 -->
+      <div class="question-card">
+        <h3>A. Which tag is used for the largest heading in HTML?</h3>
+        <input type="radio" id="q1a" name="q1"><label for="q1a">&lt;h1&gt;</label>
+        <input type="radio" id="q1b" name="q1"><label for="q1b">&lt;h6&gt;</label>
+        <input type="radio" id="q1c" name="q1"><label for="q1c">&lt;header&gt;</label>
+        <input type="radio" id="q1d" name="q1"><label for="q1d">&lt;p&gt;</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-card">
+        <h3>B. Which property is used to change text color in CSS?</h3>
+        <input type="radio" id="q2a" name="q2"><label for="q2a">font-style</label>
+        <input type="radio" id="q2b" name="q2"><label for="q2b">color</label>
+        <input type="radio" id="q2c" name="q2"><label for="q2c">text-decoration</label>
+        <input type="radio" id="q2d" name="q2"><label for="q2d">background</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-card">
+        <h3>C. Which attribute is used to add a link in HTML?</h3>
+        <input type="radio" id="q3a" name="q3"><label for="q3a">src</label>
+        <input type="radio" id="q3b" name="q3"><label for="q3b">href</label>
+        <input type="radio" id="q3c" name="q3"><label for="q3c">alt</label>
+        <input type="radio" id="q3d" name="q3"><label for="q3d">title</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-card">
+        <h3>D. Which CSS property is used to create space inside an element?</h3>
+        <input type="radio" id="q4a" name="q4"><label for="q4a">margin</label>
+        <input type="radio" id="q4b" name="q4"><label for="q4b">padding</label>
+        <input type="radio" id="q4c" name="q4"><label for="q4c">border</label>
+        <input type="radio" id="q4d" name="q4"><label for="q4d">outline</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-card">
+        <h3>E. Which tag is used to insert an image in HTML?</h3>
+        <input type="radio" id="q5a" name="q5"><label for="q5a">&lt;picture&gt;</label>
+        <input type="radio" id="q5b" name="q5"><label for="q5b">&lt;src&gt;</label>
+        <input type="radio" id="q5c" name="q5"><label for="q5c">&lt;img&gt;</label>
+        <input type="radio" id="q5d" name="q5"><label for="q5d">&lt;image&gt;</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+    <!-- Result Placeholder -->
+    <div class="result-box">
+      Your result will appear here after submission.
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 E-LearnHub. All Rights Reserved.
+  </footer>
+</body>
+</html>
